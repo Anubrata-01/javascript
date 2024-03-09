@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="input-feild">
+            <input type="text" name="display" id="display" placeholder="0">
+        </div>
+        <div class="button">
+            <div class="row1">
+                <button type="button" class="btn-symbol">AC</button>
+                <button type="button" class="btn-symbol">C</button>
+                <button type="button" class="btn-symbol">/</button>
+                <button type="button" class="btn-symbol">*</button>
+
+            </div>
+            <div class="row2">
+                <button type="button" class="btn-number">7</button>
+                <button type="button" class="btn-number">8</button>
+                <button type="button" class="btn-number">9</button>
+                <button type="button" class="btn-symbol">-</button>
+            </div>
+            <div class="row3">
+                <button type="button" class="btn-number">4</button>
+                <button type="button" class="btn-number">5</button>
+                <button type="button" class="btn-number">6</button>
+                <button type="button" class="btn-symbol">+</button>
+            </div>
+            <div class="row4">
+                <button type="button" class="btn-number">1</button>
+                <button type="button" class="btn-number">2</button>
+                <button type="button" class="btn-number">3</button>
+                <button type="button" class="btn-symbol">.</button>
+            </div>
+            <div class="row5">
+                <button type="button" class="btn-number">(</button>
+                <button type="button" class="btn-number">0</button>
+                <button type="button" class="btn-number">)</button>
+                <button type="button" class="btn-symbol">=</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let inputbox=document.getElementById("display");
+        let btn=document.querySelectorAll("button");
+        let st="";
+        const array=Array.from(btn);
+        array.forEach(btn1=>{
+            
+            btn1.addEventListener("click",function(bt){
+                if(bt.target.innerHTML == "="){
+                    st=eval(st);
+                    inputbox.value=st;
+                }
+                else if(bt.target.innerHTML == "AC"){
+                    st="";
+                    inputbox.value=st;
+                }
+                else if(bt.target.innerHTML == "C"){
+                    st=st.substring(0,st.length-1);
+                    inputbox.value=st;
+                }
+                else{ 
+                st +=bt.target.innerHTML;
+                inputbox.value=st;
+                }
+            })
+        })
+    </script>
+</body>
+</html>

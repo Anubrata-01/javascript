@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+.calculator{
+    max-width: 550px;
+    width: 100%;
+    height: 700px;
+    background: #212532;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 12px;
+    box-shadow: 0 5px 7px 8px black;
+}
+.input-feild input{
+    width: 100%;
+    height: 80px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background: #322;
+    color: aliceblue;
+    font-size: 35px;
+    padding-left: 8px;
+}
+::placeholder{
+    font-size: 36px;
+    color: #fff;
+}
+.button{
+    margin-top: 20px;
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap: 45px; */
+}
+/* .button .row1,.button .row2,.button .row3,.button .row4,.button .row5{
+    display: flex;
+    justify-content:space-between;
+    /* align-content: center; */
+    /* width: 100px; */
+    /* background-color: #fff; */
+
+/* } */ */
+.button div{
+    max-width: 550px;
+}
+.row1,.row2,.row3,.row4,.row5{
+
+    /* width: 550px; */
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #000; */
+}
+.row1 button,.row2 button,.row3 button,.row4 button,.row5 button{
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;
+    margin-bottom: 20px;
+    font-size: 26px;
+    cursor: pointer;
+}
+.btn-symbol{
+    background-color: #5d68e2;
+    color: white;
+}

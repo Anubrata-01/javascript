@@ -1,0 +1,17 @@
+{
+  "name": "portfoliomy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tailwind":"tailwindcss build src1/style.css -o public/style.css",
+    "dev":"npx tailwindcss -i ./src1/style.css -o ./public/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}

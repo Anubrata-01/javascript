@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        background-color: #0d1fa2;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+        
+      }
+      .container{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .Form{
+        width: 400px;
+        height: 400px;
+        /* border: 1px solid red; */
+        background-color: azure;
+        border-radius: 10px;
+
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* padding-top:20px; */
+        
+
+      }
+      form input{
+        padding: 20px;
+        margin-top: 13px;
+        background-color: transparent;
+        font-size: 23px;
+        outline: none;
+      color: rgb(255, 189, 127);
+        /* border:none; */
+      }
+      .submit{
+        cursor: pointer;
+        background-color:rgb(133, 96, 41);
+        border-radius: 10px;
+        
+      }
+      #ptext,#ltext,#ttext{
+        color: brown;
+        margin-top: 4px;
+        margin-left: 15px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Form"> 
+      <form action="" onsubmit="return validateform()">
+        <input
+          type="text"
+          class="name"
+          id="fname"
+          placeholder="Enter First Name"
+        />
+        <p id="ptext"></p>
+        <input
+          type="text"
+          class="name"
+          id="lname"
+          placeholder="Enter Last Name"
+        />
+        <p id="ltext"></p>
+
+        <input
+          type="password"
+          class="pass"
+          id="password"
+          placeholder="Enter password"
+        />
+        <p id="ttext"></p>
+
+        <input type="submit" value="Submit" class="submit" />
+      </form>
+    </div>
+    </div>
+    <script>
+      let text=document.querySelectorAll("#ptext");
+      let fname=document.getElementById("fname");
+      let lname=document.getElementById("lname");
+      let password=document.getElementById("password");
+      let flag=1;
+      function validateform(){
+        if(fname.value == ""){
+          document.getElementById("ptext").innerHTML="Fname is Empty";
+          document.getElementById("fname").style.borderColor="red";
+          
+          flag=0;
+          // text.style.outline="red";
+
+          
+        }
+      else if(fname.value.length <4){
+        document.getElementById("ptext").innerHTML="Minimun 4 letter required"
+        flag=0;
+
+      }
+      else{
+        document.getElementById("ptext").innerHTML="";
+        flag=1;
+
+        
+      }
+      if(lname.value == ""){
+          document.getElementById("ltext").innerHTML="lname is Empty";
+          flag=0;
+
+          
+        }
+      else if(lname.value.length <4){
+        document.getElementById("ltext").innerHTML="Minimun 4 letter required"
+        flag=0;
+
+      }
+      else{
+        document.getElementById("ltext").innerHTML="";
+        flag=1;
+
+        
+      }
+      if(password.value == ""){
+          document.getElementById("ttext").innerHTML="Password is Empty";
+          flag=0;
+
+          
+        }
+      else if(password.value.length <8){
+        document.getElementById("ttext").innerHTML="Minimun 8 Character"
+        flag=0;
+
+      }
+      else{
+        document.getElementById("ttext").innerHTML="";
+        flag=1;
+
+        
+      }
+      if(flag){
+        return true;
+      }
+      else{
+        return false;
+
+      }
+      
+      }
+
+    </script>
+  </body>
+</html>

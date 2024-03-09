@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-image: linear-gradient(rgb(130, 7, 130),black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    position: relative;
+}
+.button a button{
+    width: 250px;
+    height: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* position: relative; */
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+    /* border-radius: 15px; */
+    cursor: pointer;
+    background-color: blue;
+    /* animation: color 3s linear 1.5s infinite both; */
+
+}
+/* .button::after{
+    content:'';
+    position:absolute;
+    width: 1px;
+    height: 100%;
+    
+    background-color: aliceblue;
+} */
+.button::after{
+    content:'';
+    position:absolute;
+    width: 1px;
+    height: 100%;
+    left: 0;
+    background-color: aliceblue;
+    animation: height 2.5s linear 1s infinite forwards;
+}
+@keyframes height {
+    0%{
+        height: 0;
+        
+    }
+    15%{
+        height: 50%;
+    }
+}

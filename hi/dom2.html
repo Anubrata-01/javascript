@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bgdark{
+            background-color: aquamarine;
+        }
+        .list{
+            list-style: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li class="item">AAA</li>
+        <li class="item">aacc
+            <ul class="ul1">
+                <li class="li1">hhhhh</li>
+                <!-- <li class="li2">mmmm</li> -->
+            </ul>
+        </li>
+        <li class="item2">ddss</li>
+        <li class="item">ssssd</li>
+        <li class="item1">sdssdd</li>
+    </ul>
+    <script>
+        // let m=document.getElementsByClassName("item");
+        // // console.log(m);
+        // // let m3=document.getElementById("item2");
+        // let m3=document.querySelector(".item2");
+        // // console.log(m3);
+
+        // let m1=document.createElement("li");
+        // m1.innerHTML="hjbhsbhjsmmmmmm";
+
+        // let m2=document.querySelector(".list");
+        // m2.before(m1);
+        // m2.after(m1);
+        // m2.prepend(m1);
+        // m2.append(m1);
+        // // m1.insertAdjacentElement("afterend","<li>hello anubrata</li>");
+        // let n=document.createElement("li");
+        // n.textContent="Anubrata";
+        // m2.append(n);
+        // // let m3=document.getElementById("item2");
+        // m3.after(n);
+
+        // //static list vs live list
+        // let q=document.querySelectorAll(".list");
+        // console.log(q);
+        // let m5=document.querySelector(".list")
+        // let m4=document.createElement("li");
+        // m4.textContent="Grace";
+        // m5.append(m4);
+        // console.log(m5);
+        // console.log(m5.getBoundingClientRect());
+        //event bubbling
+        const m1=document.querySelector(".list");
+        const m2=document.querySelector(".item");
+        const m3=document.querySelector(".ul1");
+        const m4=document.querySelector(".li1");
+        m1.addEventListener("click",()=>{
+            console.log("i am m1");
+        })
+        m2.addEventListener("click",()=>{
+            console.log("i am m2");
+        })
+        m3.addEventListener("click",()=>{
+            console.log("i am m3");
+        })
+        m4.addEventListener("click",()=>{
+            console.log("i am m4");
+        })
+
+
+
+        // m2.append(m1);
+        // m2.insertAdjacentElement("beforeend","<li>hello</li>");
+        // m2.remove();
+        // m2.classList.toggle(".bgdark");
+        // console.log(m2.classList);
+        // m2.classList.add(".bgdark");
+        // console.log(m2.classList);
+//         const ar=[1,2,3,4,5,6];
+//         ar.forEach((n)=>{
+//             console.log("mul is",n*n);
+//         })
+//         const ar2=ar.map((n)=>{
+//             return n+n;
+//         })
+// console.log(ar2);
+//         const ar3=ar.filter((index,num)=>{
+//             if(num >= 2){
+//                 // let r=num+3;
+//                 // console.log(r);
+//                 console.log(`${num} is a happy number and index is:${index}`);
+//                 console.log(r);
+//             }
+//             else{
+//                 console.log(`${num} is a sad number and index is:${index}`);
+
+//             }
+//         })
+//         console.log(ar3);
+        // ar.reduce((n,c)=>{
+        //     let t=n+c;
+        //     console.log(t);
+        //         },0)
+    </script>
+</body>
+</html>
